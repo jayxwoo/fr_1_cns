@@ -1,6 +1,6 @@
 // ========== default ==========
 // stop all animations and transitions during resizing
-const stopAnimation = function () {
+const stopAnimationOnResize = () => {
     window.addEventListener('resize', () => {
         document.body.classList.add('resize-animation-stopper');
         setTimeout(function () {
@@ -8,3 +8,4 @@ const stopAnimation = function () {
         }, 300);
     });    
 };
+stopAnimationOnResize();

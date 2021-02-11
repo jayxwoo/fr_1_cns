@@ -6,9 +6,9 @@
 html { box-sizing: border-box; font-size: 16px; }
 
 /* body { min-height: 100vh } -> Set minimum height of body to 100% viewport height. It also fixes a bug where the top part getting cropped with small screen sizes. */
-/* body { scroll-behavior: smooth; } -> For smooth scrolling animation when jungming to a different element on the same page. */
+/* body { scroll-behavior: smooth; } -> For smooth scrolling animation when jumping to a different element on the same page. */
 /* body { text-rendering: optimizeSpeed } ->  Emphasize rendering speed over legibility and geometric precision. */
-/* body { line-height: 1 } -> Set text line-height to 1. */
+/* body { line-height: 1.5 } -> Set text line-height to 1.5. */
 body { min-height: 100vh; scroll-behavior: smooth; text-rendering: optimizeSpeed; line-height: 1.5; }
 
 /* *, *::before, *::after { box-sizing: inherit; } -> Inherits box-sizing value from html. */

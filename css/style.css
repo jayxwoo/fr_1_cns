@@ -27,19 +27,18 @@
 html { font-family: Arial; }
 
 /* header & hero */
-header { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; height: 80px; position: fixed; top: 0; z-index: 10; }
+.header { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; height: 80px; position: fixed; top: 0; z-index: 10; }
 .header--active { background: rgba(255, 255, 255, 0.1); backdrop-filter: saturate(180%) blur(15px); }
 
 .logo-img { max-width: 125px; padding: 5px; }
 
-.menu-btn { background: none; cursor: pointer; outline: none; border: none; }
-.menu-icon { font-size: 2rem; }
+.menu-btn { background: none; cursor: pointer; outline: none; border: none; display: none; }
+.menu-icn { font-size: 2rem; }
 
 .menu-group { display: flex; }
 .menu-link { text-decoration: none; color: var(--black); padding: 5px; position: relative; }
 .menu-link::after { content: ''; position: absolute; top: 100%; left: 0; width: 100%; height: 2px; background-color: var(--black); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease-in-out; }
 .menu-link:hover::after { transform: scaleX(1); }
-.menu-link:hover { font-weight: bold; }
 .menu-item:not(:first-of-type) { margin-left: 3rem; }
 
 .hero { background-image: url(../img/main-hero.jpg); width: 100%; height: 100vh; background-size: cover; background-position: center; background-repeat: no-repeat; padding: 0 2rem; display: flex;  align-items: center; justify-content: center; }
@@ -47,10 +46,12 @@ header { width: 100%; display: flex; justify-content: space-between; align-items
 
 @media only screen and (max-width: 800px) {
     /* menu-button */
-    .menu-btn { position: absolute; right: 2rem; }
+    .menu-btn { position: absolute; right: 2rem; display: block; }
 
     /* menu */
-    .menu-group { flex-direction: column; align-items: center; position: absolute; top: 100%; right: 0; }
+    .nav { position: absolute; top: 100%; right: 0; transform: translateX(100%); transform-origin: right; transition: transform 0.3s ease-in-out; }
+    .nav--active { transform: translateX(0); }
+    .menu-group { flex-direction: column; align-items: center; }
     .menu-item { width: 100%; text-align: center; }
     .menu-item:not(:first-of-type) { margin-left: 0; }
     .menu-link { display: block; padding: 1rem; background-color: rgba(255, 255, 255, 0.5); border-bottom: 1px solid var(--grey); }
