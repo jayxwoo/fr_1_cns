@@ -110,6 +110,5 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 }
 
 /* partners */
-.partners-container { display: flex; flex-wrap: wrap; justify-content: space-evenly; }
-.partners-item { width: 150px; height: 150px; display: flex; justify-content: center; align-items: center; margin: 2rem; }
-.partners-img {  }
+.partners-container { display: flex; flex-wrap: wrap; justify-content: space-evenly; background-color: var(--bgLightGrey); }
+.partners-item { width: 130px; height: 130px; display: flex; justify-content: center; align-items: center; margin: 2rem; }
