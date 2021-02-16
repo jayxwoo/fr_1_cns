@@ -88,7 +88,7 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 .team-position { color: var(--grey); }
 
 /* about -who */
-.about-who { background-image: url(../img/about-who-fixed.jpg); min-height: 400px; background-position: bottom; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; display: flex; align-items: center; justify-content: center; padding: 3rem; text-align: center; }
+.about-who { background-image: url(../img/about-who-fixed.jpg); min-height: 400px; background-position: bottom; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; display: flex; align-items: center; justify-content: center; padding: 3rem; text-align: center; overflow: hidden; }
 .about-who-text { font-family: 'Lobster', cursive; color: white; font-size: 5rem; font-weight: bold; line-height: 1.1; opacity: 0.9; }
 
 @media only screen and (max-width: 800px) {
