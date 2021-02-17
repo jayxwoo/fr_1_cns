@@ -29,22 +29,20 @@
 html { font-family: helvetica, sans-serif; color: var(--black); }
 
 /* header & hero */
-.header { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 3rem; height: 80px; position: fixed; top: 0; z-index: 10; }
-.header--active { background: rgba(255, 255, 255, 0.1); backdrop-filter: saturate(180%) blur(15px); }
-
+.header { width: 100%; height: 80px; position: fixed; top: 0; z-index: 10; }
+.header--active { background: rgba(255, 255, 255, 0.1); backdrop-filter: saturate(180%) blur(15px); -webkit-backdrop-filter: saturate(180%) blur(15px); }
+.header-container { width: 100%; max-width: 1440px; margin: 0 auto; height: 100%; padding: 0 3rem; display: flex; justify-content: space-between; align-items: center; }
 .logo-img { max-width: 125px; padding: 5px; }
-
 .menu-btn { background: none; cursor: pointer; outline: none; border: none; display: none; }
 .menu-icn { font-size: 2rem; }
-
 .menu-group { display: flex; }
 .menu-link { text-decoration: none; color: var(--black); padding: 5px; position: relative; }
 .menu-link::after { content: ''; position: absolute; top: 100%; left: 0; width: 100%; height: 2px; background-color: var(--black); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease-in-out; }
 .menu-link:hover::after { transform: scaleX(1); }
 .menu-item:not(:first-of-type) { margin-left: 3rem; }
 
-.hero { background-image: url(../img/main-hero.jpg); width: 100%; height: 100vh; background-size: cover; background-position: center; background-repeat: no-repeat; padding: 0 3rem; display: flex;  align-items: center; justify-content: center; }
-.hero-text { color: white; font-size: 6rem; font-weight: bold; line-height: 1.1; opacity: 0.9; }
+.hero { background-image: url(../img/main-hero.jpg); width: 100%; height: 100vh; background-size: cover; background-position: center; background-repeat: no-repeat; display: flex;  align-items: center; justify-content: center; }
+.hero-text { width: 100%; max-width: 1440px; padding: 0 3rem; color: white; font-size: 7rem; font-weight: bold; line-height: 1.1; opacity: 0.9; }
 
 @media only screen and (max-width: 800px) {
     .menu-btn { position: absolute; right: 2rem; display: block; }
@@ -70,17 +68,16 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 .section-subtext { font-size: 1rem; margin-bottom: 1rem; font-style: italic; color: grey; }
 
 /* about */
-/* .about {padding: 5rem 0; } */
 
 /* about - service */
-.about-service { background-color: var(--bgLightGrey); display: flex; }
-.service-container { padding: 5rem 3rem; width: 50vw; }
+.about-service { width: 100%; max-width: 1440px; margin: 0 auto; background-color: var(--bgLightGrey); display: flex; }
+.service-container { padding: 5rem 3rem; width: 50%; }
 .service-group { list-style: disc; margin-left: 2rem; font-size: 1.2rem; }
 .service-item { padding: 0.5rem 0; }
-.service-img { width: 50vw; object-position: center; object-fit: cover; }
+.service-img { width: 50%; object-position: center; object-fit: cover; }
 
 /* about - team */
-.about-team { padding: 5rem 3rem; }
+.about-team { width: 100%; max-width: 1440px; margin: 0 auto; padding: 5rem 3rem; }
 .team-container { display: flex; justify-content: space-evenly; flex-wrap: wrap; padding: 1rem; }
 .team-item { text-align: center; padding: 2rem 3rem; background-color: var(--bgLightGrey); margin: 1rem; border-radius: 1rem; }
 .team-icon { font-size: 10rem; margin-bottom: 1rem; color: var(--grey); }
@@ -88,8 +85,8 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 .team-position { color: var(--grey); }
 
 /* about -who */
-.about-who { background-image: url(../img/about-who-fixed.jpg); height: 400px; background-position: bottom; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; display: flex; align-items: center; justify-content: center; padding: 6rem; text-align: center; overflow: hidden; }
-.about-who-text { font-family: 'Lobster', cursive; color: white; font-size: 5rem; font-weight: bold; line-height: 1.1; opacity: 0.9; }
+.about-who { background-image: url(../img/about-who-fixed.jpg); height: 400px; background-position: bottom; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; display: flex; align-items: center; justify-content: center; text-align: center; }
+.about-who-text { width: 100%; max-width: 1440px; font-family: 'Lobster', cursive; color: white; font-size: 6rem; font-weight: bold; line-height: 1.1; opacity: 0.9; padding: 0 3rem; }
 
 @media only screen and (max-width: 800px) {
     .section-title { font-size: 3.5rem; }
@@ -102,13 +99,14 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
     .service-img { width: 100%; }
 
     .about-who { background-position: 60% 50%; }
-    .about-who-text { font-size: 4rem; }
+    .about-who-text { font-size: 5rem; }
 }
 @media only screen and (max-width: 500px ) {
     .about-who { background-position: 65% 50%; }
-    .about-who-text { font-size: 3rem; }
+    .about-who-text { font-size: 4rem; }
 }
 
 /* partners */
-.partners-container { display: flex; flex-wrap: wrap; justify-content: space-evenly; background-color: var(--bgLightGrey); }
+.partners-wrapper { background-color: var(--bgLightGrey); }
+.partners-container { width: 100%; max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-evenly; }
 .partners-item { width: 130px; height: 130px; display: flex; justify-content: center; align-items: center; margin: 2rem; }
