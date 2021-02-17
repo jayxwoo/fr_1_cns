@@ -102,9 +102,11 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
     .service-group { font-size: 1rem; }
     .service-img { width: 100%; }
 
+    .about-who { height: 300px; }
     .who-text { font-size: 4rem; }
 }
 @media only screen and (max-width: 500px ) {
+    .about-who { height: 200px; }
     .who-text { font-size: 3rem; }
 }
 
