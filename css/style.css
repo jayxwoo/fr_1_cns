@@ -33,8 +33,10 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 .header--active { background: rgba(255, 255, 255, 0.1); backdrop-filter: saturate(180%) blur(15px); -webkit-backdrop-filter: saturate(180%) blur(15px); }
 .header-container { width: 100%; max-width: 1440px; margin: 0 auto; height: 100%; padding: 0 3rem; display: flex; justify-content: space-between; align-items: center; }
 .logo-img { max-width: 125px; padding: 5px; }
+
 .menu-btn { background: none; cursor: pointer; outline: none; border: none; display: none; }
 .menu-icn { font-size: 2rem; }
+
 .menu-group { display: flex; }
 .menu-link { text-decoration: none; color: var(--black); padding: 5px; position: relative; }
 .menu-link::after { content: ''; position: absolute; top: 100%; left: 0; width: 100%; height: 2px; background-color: var(--black); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease-in-out; }
@@ -52,7 +54,7 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
     .menu-group { flex-direction: column; align-items: center; }
     .menu-item { width: 100%; text-align: center; }
     .menu-item:not(:first-of-type) { margin-left: 0; }
-    .menu-link { display: block; padding: 1rem; background-color: rgba(255, 255, 255, 0.5); border-bottom: 1px solid var(--grey); }
+    .menu-link { display: block; padding: 1rem; background-color: rgba(255, 255, 255, 0.8); border-bottom: 1px solid var(--grey); }
     .menu-link:hover { background-color: rgba(255, 255, 255, 0.7) }
     
     .hero-text { font-size: 5rem; }
@@ -79,7 +81,7 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 /* about - team */
 .about-team { width: 100%; max-width: 1440px; margin: 0 auto; padding: 5rem 3rem; }
 .team-container { display: flex; justify-content: space-evenly; flex-wrap: wrap; padding: 1rem; }
-.team-item { text-align: center; padding: 2rem 3rem; background-color: var(--bgLightGrey); margin: 1rem; border-radius: 1rem; }
+.team-item { text-align: center; padding: 2rem 3rem; background-color: var(--bgLightGrey); margin: 2rem; border-radius: 1rem; }
 .team-icon { font-size: 10rem; margin-bottom: 1rem; color: var(--grey); }
 .team-name { font-family: 'Lobster', cursive; font-size: 1.3rem; margin-bottom: 10px; }
 .team-position { color: var(--grey); }
