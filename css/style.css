@@ -108,5 +108,5 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 
 /* partners */
 .partners-wrapper { background-color: var(--bgLightGrey); }
-.partners-container { width: 100%; max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-evenly; }
-.partners-item { width: 130px; height: 130px; display: flex; justify-content: center; align-items: center; margin: 2rem; }
+.partners-container { padding: 3rem; width: 100%; max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-evenly; }
+.partners-item { width: 130px; height: 130px; display: flex; justify-content: center; align-items: center; margin: 3rem; }
