@@ -35,7 +35,7 @@ menuBtn.addEventListener('click', (e) => {
     };
 });
 
-// Fixed bg - about-who
+// Parallax background img (about-who section)
 window.addEventListener('scroll', () => {
     if (window.pageYOffset > aboutWho.offsetTop - window.innerHeight && window.pageYOffset < aboutWho.offsetTop + aboutWho.scrollHeight - header.scrollHeight) {
         const scroll = window.pageYOffset;

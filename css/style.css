@@ -111,6 +111,8 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 }
 
 /* partners */
+.partners-title { margin-bottom: 0rem; }
+.partners-text { text-align: center; color: var(--grey); font-style: italic; font-size: 1.5rem; font-weight: bold; max-width: 500px; margin: 2rem auto; font-family: 'Times New Roman', Times, serif; padding: 3rem; }
 .partners-wrapper { background-color: var(--bgLightGrey); }
 .partners-container { padding: 3rem; width: 100%; max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-evenly; }
 .partners-item { width: 130px; height: 130px; display: flex; justify-content: center; align-items: center; margin: 3rem; }
