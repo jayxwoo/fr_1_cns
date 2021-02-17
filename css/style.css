@@ -64,7 +64,7 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 }
 
 /* section */
-.section-title { font-family: 'Lobster', cursive; text-align: center; font-size: 4rem; font-weight: bold; position: relative; margin: 7rem 0; }
+.section-title { font-family: 'Lobster', cursive; text-align: center; font-size: 4rem; font-weight: bold; position: relative; margin: 10rem 0; }
 .section-title::after { content: ''; width: 50px; height: 2px; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--black); }
 .section-subtitle { font-family: 'Lobster', cursive; font-size: 2.5rem; margin-bottom: 0.5rem; }
 .section-subtext { font-size: 1rem; margin-bottom: 1rem; font-style: italic; color: grey; }
@@ -103,16 +103,16 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
     .service-img { width: 100%; }
 
     .about-who { height: 300px; }
-    .who-text { font-size: 3.5rem; }
+    .who-text { font-size: 3rem; }
 }
 @media only screen and (max-width: 500px ) {
     .about-who { height: 200px; }
-    .who-text { font-size: 2.5rem; }
+    .who-text { font-size: 2rem; }
 }
 
 /* partners */
 .partners-title { margin-bottom: 0rem; }
-.partners-text { text-align: center; color: var(--grey); font-style: italic; font-size: 1.5rem; font-weight: bold; max-width: 500px; margin: 2rem auto; font-family: 'Times New Roman', Times, serif; padding: 3rem; }
+.partners-text { text-align: center; color: var(--grey); font-style: italic; font-size: 1.5rem; font-weight: bold; max-width: 500px; margin: 3rem auto; font-family: 'Times New Roman', Times, serif; padding: 3rem; }
 .partners-wrapper { background-color: var(--bgLightGrey); }
 .partners-container { padding: 3rem; width: 100%; max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-evenly; }
 .partners-item { width: 130px; height: 130px; display: flex; justify-content: center; align-items: center; margin: 3rem; }
