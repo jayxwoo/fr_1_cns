@@ -47,3 +47,5 @@ window.addEventListener('scroll', () => {
         whoImg.style.objectPosition = `50% ${reverseScrollRatio}%`;
     };
 });
+
+// Load partner logo imgs
