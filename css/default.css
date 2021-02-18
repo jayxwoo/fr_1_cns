@@ -3,13 +3,13 @@
 /* ========== default ========== */
 /* html { box-sizing: border-box } -> Box size includes margin, border, padding, and element. */
 /* html { font-size: 16px } -> Set root font size. */
-html { box-sizing: border-box; font-size: 16px; }
+html { box-sizing: border-box; font-size: 16px; scroll-behavior: smooth; }
 
 /* body { min-height: 100vh } -> Set minimum height of body to 100% viewport height. It also fixes a bug where the top part getting cropped with small screen sizes. */
 /* body { scroll-behavior: smooth; } -> For smooth scrolling animation when jumping to a different section on the same page. */
 /* body { text-rendering: optimizeSpeed } ->  Emphasize rendering speed over legibility and geometric precision. */
 /* body { line-height: 1.5 } -> Set text line-height to 1.5. */
-body { min-height: 100vh; scroll-behavior: scroll; text-rendering: optimizeSpeed; line-height: 1.5; }
+body { min-height: 100vh; text-rendering: optimizeSpeed; line-height: 1.5; }
 
 /* *, *::before, *::after { box-sizing: inherit; } -> Inherits box-sizing value from html. */
 /* *, *::before, *::after { margin: 0; padding: 0; } -> Set margin and padding to zero to all elements. */

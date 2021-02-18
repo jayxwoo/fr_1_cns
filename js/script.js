@@ -39,10 +39,10 @@ const main = function () {
 
     // Parallax background img (about-who section)
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > aboutWho.offsetTop - window.innerHeight && window.pageYOffset < aboutWho.offsetTop + aboutWho.scrollHeight - header.scrollHeight) {
+        if (window.pageYOffset > aboutWho.offsetTop - window.innerHeight && window.pageYOffset < aboutWho.offsetTop + aboutWho.scrollHeight) {
             const scroll = window.pageYOffset;
             const startPosition = aboutWho.offsetTop - window.innerHeight;
-            const endPosition = aboutWho.offsetTop + aboutWho.scrollHeight - header.scrollHeight;
+            const endPosition = aboutWho.offsetTop + aboutWho.scrollHeight;
             const scrollRatio = Math.round((scroll - startPosition) / (endPosition - startPosition) * 100);
             const reverseScrollRatio = 100 - scrollRatio;
 
