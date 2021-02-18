@@ -43,7 +43,7 @@ const main = function () {
             const scroll = window.pageYOffset;
             const startPosition = aboutWho.offsetTop - window.innerHeight;
             const endPosition = aboutWho.offsetTop + aboutWho.scrollHeight;
-            const scrollRatio = Math.round((scroll - startPosition) / (endPosition - startPosition) * 100);
+            const scrollRatio = (scroll - startPosition) / (endPosition - startPosition) * 100;
             const reverseScrollRatio = 100 - scrollRatio;
 
             whoImg.style.objectPosition = `50% ${reverseScrollRatio}%`;
