@@ -101,7 +101,8 @@
     <section class="partners" id="partners">
         <h2 class="section-title partners-title">Partners</h2>
         <p class="partners-text">"We are previleged to work with some of the best partners in the world."</p>
-        <p style="color: red; font-size: 1.2rem; font-weight: lighter;" class="partners-text">Below company logos are example placeholders. They will be replaced later.</p>
+        <p style="color: red; font-size: 1.2rem; font-weight: lighter;" class="partners-text">Below company logos are
+            example placeholders. They will be replaced later.</p>
         <div class="partners-wrapper">
             <div class="partners-container">
             </div>
@@ -147,25 +148,29 @@
 
     <!-- Contact -->
     <section class="contact" id="contact">
-        <h2 class="section-title partners-title">contact</h2>
+        <h2 class="section-title contact-title">contact</h2>
         <form class="contact-form" action="">
             <fieldset>
-                <legend class="form-title">Contact form</legend>
-                <div class="form-name">
-                    <label class="name-label" for="name">Name</label>
-                    <input class="name-input" type="text" name="name" id="name" required>
+                <legend class="contact-form-title">Contact Us</legend>
+                <p class="contact-form-subtitle">We will get back to you as soon as possible.</p>
+                <div class="contact-form-name contact-form-item">
+                    <label class="name-label input-label" for="name">Name <span class="required-symbol" aria-label="required" title="required">*</span></label>
+                    <input class="name-input contact-input" type="text" name="name" id="name" required>
                 </div>
-                <div class="form-email">
-                    <label class="email-label" for="email">email</label>
-                    <input class="email-input" type="text" name="email" id="email" required>
+                <div class="contact-form-email contact-form-item">
+                    <label class="email-label input-label" for="email">Email <span class="required-symbol" aria-label="required" title="required">*</span></label>
+                    <input class="email-input contact-input" type="text" name="email" id="email" required>
                 </div>
-                <div class="form-message">
-                    <label class="message-label" for="">Message</label>
-                    <input class="message-input" type="text" name="message" id="message" required>
+                <div class="contact-form-message contact-form-item">
+                    <label class="message-label input-label" for="">Message <span class="required-symbol" aria-label="required" title="required">*</span></label>
+                    <p class="input-label-desc">(limited to 500 words)</p>
+                    <textarea class="message-input contact-input" placeholder="Write something.." name="message" id="message" maxlength="500" required></textarea>
                 </div>
             </fieldset>
-            <input class="reset-btn" type="reset" value="Reset">
-            <input class="submit-btn" type="submit" value="Send">
+            <div class="contact-btn-container">
+                <input class="contact-reset-btn contact-btn" type="reset" value="Reset">
+                <input class="contact-submit-btn contact-btn" type="submit" value="Send">
+            </div>
         </form>
     </section>
 
