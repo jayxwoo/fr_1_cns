@@ -75,7 +75,7 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 
 /* section */
 .section-title { font-family: 'Lobster', cursive; text-align: center; font-size: 4rem; font-weight: bold; position: relative; margin: 10rem 0; }
-.section-title::after { content: ''; width: 50px; height: 2px; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--black); }
+.section-title::after { content: ''; width: 50px; height: 3px; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--blue); }
 .section-subtitle { font-family: 'Lobster', cursive; font-size: 2.5rem; margin-bottom: 0.5rem; }
 .section-subtext { font-size: 1rem; margin-bottom: 1rem; font-style: italic; color: grey; }
 
