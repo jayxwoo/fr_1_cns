@@ -10,6 +10,8 @@ const aboutWho = document.querySelector('.about-who');
 const whoImg = document.querySelector('.who-img');
 const partnersContainer = document.querySelector('.partners-container');
 const galleryContainer = document.querySelector('.gallery-container');
+const animation_1 = document.querySelector('.animation-1');
+const animation_1_img = document.querySelector('.animation-1-img');
 
 // ========== global variables ==========
 
@@ -87,6 +89,18 @@ const main = function () {
         galleryItem.appendChild(galleryImg);
         galleryItem.classList.add('gallery-item');
         galleryContainer.appendChild(galleryItem);
+    });
+
+    // animation-1
+    window.addEventListener('scroll', () => {
+        // section 1
+        if (window.pageYOffset > animation_1.offsetTop - window.innerHeight && window.pageYOffset < animation_1.offsetTop) {
+            const scroll = window.pageYOffset;
+            const startPosition = animation_1.offsetTop - window.innerHeight;
+            const endPosition = animation_1.offsetTop;
+            const scrollRatio = (scroll - startPosition) / (endPosition - startPosition) * 100;
+            animation_1_img.style.top = `${-100 + scrollRatio}vh`;
+        };
     });
 };
 main();
