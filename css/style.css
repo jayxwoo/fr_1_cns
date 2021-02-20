@@ -154,3 +154,8 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 .contact-submit-btn { background-color: var(--blue); }
 .contact-btn:hover { box-shadow: grey 3px 3px 10px; }
 .contact-btn:active { transform: translate(2px, 2px); }
+
+/* footer */
+.footer { width: 100%; background-color: var(--black); color: white; margin-top: 10rem; }
+.footer-container { width: 100%; max-width: 1440px; margin: 0 auto; padding: 3rem; text-align: center; font-weight: lighter; font-size: 0.8rem; }
+.footer-copyright { margin-bottom: 0.5rem; }
