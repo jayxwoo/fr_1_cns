@@ -31,7 +31,7 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 
 /* header & hero */
 .header { width: 100%; height: 80px; position: fixed; top: 0; z-index: 10; }
-.header--active { background: rgba(255, 255, 255, 0.1); backdrop-filter: saturate(180%) blur(15px); -webkit-backdrop-filter: saturate(180%) blur(15px); }
+.header--active { background: rgba(255, 255, 255, 0.1); backdrop-filter: saturate(180%) blur(15px); -webkit-backdrop-filter: saturate(180%) blur(15px); box-shadow: var(--black) 1px 1px 5px; }
 .header-container { width: 100%; max-width: 1440px; margin: 0 auto; height: 100%; padding: 0 3rem; display: flex; justify-content: space-between; align-items: center; }
 .logo-img { max-width: 100px; }
 
