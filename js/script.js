@@ -9,6 +9,7 @@ const nav = document.querySelector('.nav');
 const aboutWho = document.querySelector('.about-who');
 const whoImg = document.querySelector('.who-img');
 const partnersContainer = document.querySelector('.partners-container');
+const galleryContainer = document.querySelector('.gallery-container');
 
 // ========== global variables ==========
 
@@ -67,6 +68,25 @@ const main = function () {
         partnersItem.appendChild(partnerLogoImg);
         partnersItem.classList.add('partners-item');
         partnersContainer.appendChild(partnersItem);
+    });
+
+    // Load gallery imgs
+    const galleryImgs = [];
+    const numOfGalleryImgs = 10;
+
+    for (let i = 0; i < numOfGalleryImgs; i++) {
+        const img = new Image();
+        img.src = `./img/gallery/gallery-img-${i + 1}.jpg`;
+        img.classList.add('gallery-img');
+        img.setAttribute('alt', 'logistics image');
+        galleryImgs.push(img);
+    };
+
+    galleryImgs.forEach(galleryImg => {
+        const galleryItem = document.createElement('figure');
+        galleryItem.appendChild(galleryImg);
+        galleryItem.classList.add('gallery-item');
+        galleryContainer.appendChild(galleryItem);
     });
 };
 main();
