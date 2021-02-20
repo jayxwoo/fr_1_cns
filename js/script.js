@@ -11,6 +11,7 @@ const whoImg = document.querySelector('.who-img');
 const partnersContainer = document.querySelector('.partners-container');
 const galleryContainer = document.querySelector('.gallery-container');
 const animation_1 = document.querySelector('.animation-1');
+const animation_1_container = document.querySelector('.animation-1-container');
 const animation_1_img = document.querySelector('.animation-1-img');
 
 // ========== global variables ==========
@@ -99,7 +100,7 @@ const main = function () {
             const startPosition = animation_1.offsetTop - window.innerHeight;
             const endPosition = animation_1.offsetTop;
             const scrollRatio = (scroll - startPosition) / (endPosition - startPosition) * 100;
-            animation_1_img.style.top = `${-100 + scrollRatio}vh`;
+            animation_1_container.style.top = `${-100 + scrollRatio}vh`;
         };
     });
 };
