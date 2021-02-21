@@ -13,6 +13,7 @@ const galleryContainer = document.querySelector('.gallery-container');
 const animation_1 = document.querySelector('.animation-1');
 const animation_1_container = document.querySelector('.animation-1-container');
 const animation_1_img = document.querySelector('.animation-1-img');
+const animation_1_text = document.querySelector('.animation-1-text');
 
 // ========== global variables ==========
 
