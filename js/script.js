@@ -103,9 +103,8 @@ const main = function () {
             const scroll = window.pageYOffset;
             const startPosition = animation_1.offsetTop - window.innerHeight;
             const endPosition = animation_1.offsetTop;
-            const scrollRatio = (scroll - startPosition) / (endPosition - startPosition) * 100;
-
-            animation_1_container.style.top = `${-100 + scrollRatio}vh`;
+            const scrollRatio = (scroll - startPosition) / (endPosition - startPosition);
+            animation_1_container.style.top = `${-window.innerHeight + window.innerHeight * scrollRatio}px`;
         };
 
         // section 2
@@ -123,9 +122,8 @@ const main = function () {
 
         // section 3
         if (window.pageYOffset > animation_1.offsetTop + window.innerHeight) {
-            console.log(animation_1_container.offsetTop);
             animation_1_container.style.position = 'absolute';
-            animation_1_container.style.top = '100vh';
+            animation_1_container.style.top = `${window.innerHeight}px`;
         };
     });
 };
