@@ -57,7 +57,7 @@ const main = function () {
 
     // Load partner logo imgs
     const partnerLogoImgs = [];
-    const numOfPartnerLogoImgs = 10;
+    const numOfPartnerLogoImgs = 9;
 
     for (let i = 0; i < numOfPartnerLogoImgs; i++) {
         const img = new Image();
