@@ -18,6 +18,7 @@ const animation_1_img = document.querySelector('.animation-1-img');
 
 
 // ========== script ==========
+// main
 const main = function () {
     // Detect scroll and apply background to the header(or navbar)
     window.addEventListener('scroll', () => {
@@ -48,9 +49,8 @@ const main = function () {
             const startPosition = aboutWho.offsetTop - window.innerHeight;
             const endPosition = aboutWho.offsetTop + aboutWho.scrollHeight;
             const scrollRatio = (scroll - startPosition) / (endPosition - startPosition) * 100;
-            const reverseScrollRatio = 100 - scrollRatio;
 
-            whoImg.style.objectPosition = `50% ${reverseScrollRatio}%`;
+            whoImg.style.objectPosition = `50% ${100 - scrollRatio}%`;
         };
     });
 
@@ -96,11 +96,37 @@ const main = function () {
     window.addEventListener('scroll', () => {
         // section 1
         if (window.pageYOffset > animation_1.offsetTop - window.innerHeight && window.pageYOffset < animation_1.offsetTop) {
+            animation_1_container.style.position = 'absolute';
+
             const scroll = window.pageYOffset;
             const startPosition = animation_1.offsetTop - window.innerHeight;
             const endPosition = animation_1.offsetTop;
             const scrollRatio = (scroll - startPosition) / (endPosition - startPosition) * 100;
+
             animation_1_container.style.top = `${-100 + scrollRatio}vh`;
+            if (scrollRatio > 95) {
+                animation_1_container.style.top = 0;
+            };
+        };
+
+        // section 2
+        if (window.pageYOffset > animation_1.offsetTop && window.pageYOffset < animation_1.offsetTop + window.innerHeight) {
+            animation_1_container.style.position = 'fixed';
+            animation_1_container.style.top = 0;
+
+            const scroll = window.pageYOffset;
+            const startPosition = animation_1.offsetTop;
+            const endPosition = animation_1.offsetTop + window.innerHeight;
+            const scrollRatio = (scroll - startPosition) / (endPosition - startPosition);
+            console.log(scrollRatio);
+            animation_1_container.style.position = 'fixed';
+            animation_1_container.style.transform = `scale(${1 - (0.5 * scrollRatio)})`;
+        };
+
+        // section 3
+        if (window.pageYOffset > animation_1.offsetTop + window.innerHeight) {
+            animation_1_container.style.position = 'absolute';
+            animation_1_container.style.top = '100vh';
         };
     });
 };
