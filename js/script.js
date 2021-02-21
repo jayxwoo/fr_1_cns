@@ -55,24 +55,26 @@ const main = function () {
         };
     });
 
-    // Load partner logo imgs
-    const partnerLogoImgs = [];
-    const numOfPartnerLogoImgs = 9;
+    // // Load partner logo imgs
+    // const partnerLogoImgs = [];
+    // const numOfPartnerLogoImgs = 9;
 
-    for (let i = 0; i < numOfPartnerLogoImgs; i++) {
-        const img = new Image();
-        img.src = `./img/partners/partner-${i + 1}.png`;
-        img.classList.add('partners-img');
-        img.setAttribute('alt', 'partner logo image');
-        partnerLogoImgs.push(img);
-    };
+    // for (let i = 0; i < numOfPartnerLogoImgs; i++) {
+    //     const img = new Image();
+    //     img.src = `./img/partners/partner-${i + 1}.png`;
+    //     img.classList.add('partners-img');
+    //     img.setAttribute('alt', 'partner logo image');
+    //     partnerLogoImgs.push(img);
+    // };
 
-    partnerLogoImgs.forEach(partnerLogoImg => {
-        const partnersItem = document.createElement('div');
-        partnersItem.appendChild(partnerLogoImg);
-        partnersItem.classList.add('partners-item');
-        partnersContainer.appendChild(partnersItem);
-    });
+    // partnerLogoImgs.forEach(partnerLogoImg => {
+    //     const partnersItem = document.createElement('div');
+    //     const partnersLink = document.createElement('a');
+    //     partnersItem.appendChild(partnersLink);
+    //     partnersItem.classList.add('partners-item');
+    //     partnersLink.appendChild(partnerLogoImg);
+    //     partnersContainer.appendChild(partnersItem);
+    // });
 
     // Load gallery imgs
     const galleryImgs = [];
