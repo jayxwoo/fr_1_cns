@@ -113,7 +113,6 @@ const main = function () {
             const endPosition = animation_1.offsetTop;
             const scrollRatio = (scroll - startPosition) / (endPosition - startPosition);
             const newScrollRatio = 1280 * (1-scrollRatio);
-            console.log(newScrollRatio);
 
             const animation_1_context = animation_1_canvas.getContext('2d');
             const animation_1_img = new Image();
@@ -121,7 +120,7 @@ const main = function () {
                 requestAnimationFrame(() => {
                     animation_1_context.drawImage(animation_1_img, 0, newScrollRatio, 1920, 1280, 0, 0, 1920, 1280);
 
-                    if (newScrollRatio > 0 && newScrollRatio < 10) {
+                    if (newScrollRatio > 0 && newScrollRatio < 30) {
                         animation_1_context.drawImage(animation_1_img, 0, 0);
                     };
                 });
