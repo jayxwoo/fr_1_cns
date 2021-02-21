@@ -101,6 +101,8 @@ const main = function () {
             const endPosition = animation_1.offsetTop;
             const scrollRatio = (scroll - startPosition) / (endPosition - startPosition) * 100;
             animation_1_container.style.top = `${-100 + scrollRatio}vh`;
+            animation_1_container.style.height = '100vh';
+            animation_1_img.style.height = '100vh';
         };
     });
 };
