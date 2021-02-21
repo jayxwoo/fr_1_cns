@@ -12,7 +12,7 @@ const partnersContainer = document.querySelector('.partners-container');
 const galleryContainer = document.querySelector('.gallery-container');
 const animation_1 = document.querySelector('.animation-1');
 const animation_1_container = document.querySelector('.animation-1-container');
-const animation_1_img = document.querySelector('.animation-1-img');
+const animation_1_canvas = document.querySelector('.animation-1-canvas');
 
 // ========== global variables ==========
 
@@ -60,7 +60,7 @@ const main = function () {
 
     for (let i = 0; i < numOfPartnerLogoImgs; i++) {
         const img = new Image();
-        img.src = `./img/partners/partner-${i + 1}.png`;
+        img.src = `../img/partners/partner-${i + 1}.png`;
         img.classList.add('partners-img');
         img.setAttribute('alt', 'partner logo image');
         partnerLogoImgs.push(img);
@@ -79,7 +79,7 @@ const main = function () {
 
     for (let i = 0; i < numOfGalleryImgs; i++) {
         const img = new Image();
-        img.src = `./img/gallery/gallery-img-${i + 1}.jpg`;
+        img.src = `../img/gallery/gallery-img-${i + 1}.jpg`;
         img.classList.add('gallery-img');
         img.setAttribute('alt', 'logistics image');
         galleryImgs.push(img);
@@ -92,6 +92,18 @@ const main = function () {
         galleryContainer.appendChild(galleryItem);
     });
 
+    // // animation-1
+    // window.addEventListener('scroll', () => {
+    //     // section 1
+    //     if (window.pageYOffset > animation_1.offsetTop - window.innerHeight && window.pageYOffset < animation_1.offsetTop) {
+    //         const scroll = window.pageYOffset;
+    //         const startPosition = animation_1.offsetTop - window.innerHeight;
+    //         const endPosition = animation_1.offsetTop;
+    //         const scrollRatio = (scroll - startPosition) / (endPosition - startPosition) * 100;
+    //         animation_1_container.style.top = `${-100 + scrollRatio}vh`;
+    //     };
+    // });
+
     // animation-1
     window.addEventListener('scroll', () => {
         // section 1
@@ -99,8 +111,22 @@ const main = function () {
             const scroll = window.pageYOffset;
             const startPosition = animation_1.offsetTop - window.innerHeight;
             const endPosition = animation_1.offsetTop;
-            const scrollRatio = (scroll - startPosition) / (endPosition - startPosition) * 100;
-            animation_1_container.style.top = `${-100 + scrollRatio}vh`;
+            const scrollRatio = (scroll - startPosition) / (endPosition - startPosition);
+            const newScrollRatio = 1280 * (1-scrollRatio);
+            console.log(newScrollRatio);
+
+            const animation_1_context = animation_1_canvas.getContext('2d');
+            const animation_1_img = new Image();
+            animation_1_img.onload = function () {
+                requestAnimationFrame(() => {
+                    animation_1_context.drawImage(animation_1_img, 0, newScrollRatio, 1920, 1280, 0, 0, 1920, 1280);
+
+                    if (newScrollRatio > 0 && newScrollRatio < 10) {
+                        animation_1_context.drawImage(animation_1_img, 0, 0);
+                    };
+                });
+            };
+            animation_1_img.src = '../img/animation/animation-img-1.jpg';
         };
     });
 };
