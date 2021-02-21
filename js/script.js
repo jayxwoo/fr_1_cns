@@ -60,7 +60,7 @@ const main = function () {
 
     for (let i = 0; i < numOfPartnerLogoImgs; i++) {
         const img = new Image();
-        img.src = `../img/partners/partner-${i + 1}.png`;
+        img.src = `./img/partners/partner-${i + 1}.png`;
         img.classList.add('partners-img');
         img.setAttribute('alt', 'partner logo image');
         partnerLogoImgs.push(img);
@@ -79,7 +79,7 @@ const main = function () {
 
     for (let i = 0; i < numOfGalleryImgs; i++) {
         const img = new Image();
-        img.src = `../img/gallery/gallery-img-${i + 1}.jpg`;
+        img.src = `./img/gallery/gallery-img-${i + 1}.jpg`;
         img.classList.add('gallery-img');
         img.setAttribute('alt', 'logistics image');
         galleryImgs.push(img);
@@ -125,7 +125,7 @@ const main = function () {
                     };
                 });
             };
-            animation_1_img.src = '../img/animation/animation-img-1.jpg';
+            animation_1_img.src = './img/animation/animation-img-1.jpg';
         };
     });
 };
