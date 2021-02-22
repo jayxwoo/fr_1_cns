@@ -173,6 +173,7 @@ const main = function () {
             animation_1_text.style.transform = `scale(${1 + (50 * scrollRatio)})`;
             animation_1_text.style.color = 'transparent';
             animation_1_text.style.textShadow = `0 0 ${1 * scrollRatio}px var(--white)`;
+            animation_1_text.style.webkitTextShadow = `0 0 ${1 * scrollRatio}px var(--white)`;
         };
 
         // section 3 - back to normal
