@@ -95,37 +95,91 @@ const main = function () {
         galleryContainer.appendChild(galleryItem);
     });
 
+    // // animation-1
+    // window.addEventListener('scroll', () => {
+    //     // section 1 - fixed bg
+    //     if (window.pageYOffset > animation_1.offsetTop - window.innerHeight && window.pageYOffset < animation_1.offsetTop) {
+    //         animation_1_container.style.position = 'absolute';
+    //         animation_1_container.style.transform = 'scale(1)';
+    //         animation_1_text.style.transform = 'scale(1)';
+
+    //         const scroll = window.pageYOffset;
+    //         const startPosition = animation_1.offsetTop - window.innerHeight;
+    //         const endPosition = animation_1.offsetTop;
+    //         const scrollRatio = (scroll - startPosition) / (endPosition - startPosition);
+    //         animation_1_container.style.top = `${-window.innerHeight + window.innerHeight * scrollRatio}px`;
+    //     };
+
+    //     // section 2 - scale down
+    //     if (window.pageYOffset > animation_1.offsetTop && window.pageYOffset < animation_1.offsetTop + window.innerHeight) {
+    //         animation_1_container.style.position = 'fixed';
+    //         animation_1_container.style.top = 0;
+
+    //         const scroll = window.pageYOffset;
+    //         const startPosition = animation_1.offsetTop;
+    //         const endPosition = animation_1.offsetTop + window.innerHeight;
+    //         const scrollRatio = (scroll - startPosition) / (endPosition - startPosition);
+    //         animation_1_container.style.position = 'fixed';
+    //         animation_1_container.style.transform = `scale(${1 - (0.5 * scrollRatio)})`;
+
+    //         animation_1_text.style.transform = `scale(${1 + (50 * scrollRatio)})`;
+    //         // animation_1_text.style.fontSize = `${2 + (10 * scrollRatio)}rem`;
+    //     };
+
+    //     // section 3 - back to normal
+    //     if (window.pageYOffset > animation_1.offsetTop + window.innerHeight) {
+    //         animation_1_container.style.position = 'absolute';
+    //         animation_1_container.style.top = `${window.innerHeight}px`;
+    //     };
+    // });
+
     // animation-1
     window.addEventListener('scroll', () => {
-        // section 1
+        // section 1 - fixed bg
         if (window.pageYOffset > animation_1.offsetTop - window.innerHeight && window.pageYOffset < animation_1.offsetTop) {
-            animation_1_container.style.position = 'absolute';
-            animation_1_container.style.transform = 'scale(1)';
+            // reinstate
+            animation_1_container.style.position = 'relative';
+            animation_1_container.style.transform = `scale(1)`;
+            animation_1_text.style.transform = `scale(1)`;
+            animation_1_text.style.color = 'var(--white)';
+            animation_1_text.style.textShadow = 'none';
 
+            // calc scrollRatio
             const scroll = window.pageYOffset;
             const startPosition = animation_1.offsetTop - window.innerHeight;
             const endPosition = animation_1.offsetTop;
             const scrollRatio = (scroll - startPosition) / (endPosition - startPosition);
-            animation_1_container.style.top = `${-window.innerHeight + window.innerHeight * scrollRatio}px`;
+
+            // animation
+            animation_1_img.style.top = `${-100 + (100 * scrollRatio)}vh`;
         };
 
-        // section 2
+        // section 2 - scale down
         if (window.pageYOffset > animation_1.offsetTop && window.pageYOffset < animation_1.offsetTop + window.innerHeight) {
-            animation_1_container.style.position = 'fixed';
-            animation_1_container.style.top = 0;
+            // reinstate
+            animation_1_img.style.top = 0;
 
+            // calc scrollRatio
             const scroll = window.pageYOffset;
             const startPosition = animation_1.offsetTop;
             const endPosition = animation_1.offsetTop + window.innerHeight;
             const scrollRatio = (scroll - startPosition) / (endPosition - startPosition);
+            animation_1_text.style.display = 'block';
+
+            // animation
             animation_1_container.style.position = 'fixed';
+            animation_1_container.style.top = 0;
             animation_1_container.style.transform = `scale(${1 - (0.5 * scrollRatio)})`;
+            animation_1_text.style.transform = `scale(${1 + (50 * scrollRatio)})`;
+            animation_1_text.style.color = 'transparent';
+            animation_1_text.style.textShadow = `0 0 ${1 * scrollRatio}px var(--white)`;
         };
 
-        // section 3
+        // section 3 - back to normal
         if (window.pageYOffset > animation_1.offsetTop + window.innerHeight) {
-            animation_1_container.style.position = 'absolute';
+            animation_1_container.style.position = 'relative';
             animation_1_container.style.top = `${window.innerHeight}px`;
+            animation_1_text.style.display = 'none';
         };
     });
 };
