@@ -17,6 +17,8 @@
     --bgLightGrey: rgba(245, 245, 245);
     --blue: rgba(0, 187, 255);
     --white: rgba(255, 255, 255, 0.9);
+    --red: rgba(255, 108, 71, 0.7);
+    --green: rgba(0, 199, 96, 0.7);
 }
 
 /* ====================
@@ -44,7 +46,8 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 .menu-item:not(:first-of-type) { margin-left: 3rem; }
 .hero { background-image: url(../img/main-hero.jpg); width: 100%; height: 100vh; background-size: cover; background-position: center; background-repeat: no-repeat; display: flex;  align-items: center; justify-content: center; }
 .hero-container { width: 100%; max-width: 1440px; padding: 0 3rem; }
-.hero-text { width: 100%; color: var(--white); font-size: 7rem; font-weight: bold; line-height: 1.1; }
+.hero-text { width: 100%; color: var(--white); font-size: 6.5rem; font-weight: bold; line-height: 1.1; }
+.hero-company { margin-top: 1rem; transition: all 0.5s ease-in-out; }
 
 @media only screen and (max-width: 800px) {
     .header--active { height: 70px; }
@@ -57,7 +60,7 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
     .menu-item:not(:first-of-type) { margin-left: 0; }
     .menu-link { display: block; padding: 1rem; background-color: rgba(255, 255, 255, 0.8); border-bottom: 2px solid var(--grey); }
     .menu-link:hover { background-color: rgba(255, 255, 255, 0.7) }
-    .hero-text { font-size: 5rem; }
+    .hero-text { font-size: 4.5rem; }
 }
 @media only screen and (max-width: 500px ) {
     .header-container { padding: 0 2rem; }
@@ -65,7 +68,7 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
     .logo-img { width: 40px; }
     .menu-btn { right: 2rem; }
     .hero-container { padding: 0 2rem; }
-    .hero-text { font-size: 4rem; }
+    .hero-text { font-size: 3.5rem; }
 }
 
 /* section */
@@ -132,15 +135,10 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 }
 
 /* animation-1 */
-/* .animation-1-bg { background-image: url(../img/animation/animation-img-1.jpg); width: 100%; height: 100vh; background-attachment: fixed; background-position: center; background-size: cover; background-repeat: no-repeat; } */
 .animation-1 { width: 100%; height: 200vh; position: relative; }
 .animation-1-container { width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; position: relative; z-index: -1; }
 .animation-1-img { width: 100%; height: 100%; object-position: center; object-fit: cover; position: absolute; top: -100vh; left: 0; z-index: -2; }
 .animation-1-text { font-family: 'Lobster', cursive; font-weight: bolder; width: 100%; color: var(--white); text-align: center; font-size: 3rem; padding: 3rem; }
-/* .animation-1 { width: 100%; height: 200vh; position: relative; }
-.animation-1-container { border: 3px solid red; width: 100%; height: 100vh; position: absolute; top: 0; z-index: -1; }
-.animation-1-img { border: 3px solid blue; width: 100%; height: 100%; object-position: center; object-fit: cover; }
-.animation-1-text { border: 3px solid green; font-family: 'Lobster', cursive; font-weight: bolder; width: 100%; color: white; text-align: center; font-size: 3rem; position: absolute; top: 50%; left: 0; transform: translateY(-50%); padding: 3rem; } */
 
 @media only screen and (max-width: 500px ) {
     .animation-1-text { padding: 2rem; font-size: 2rem; }
@@ -175,6 +173,7 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 .contact-submit-btn { background-color: var(--blue); }
 .contact-btn:hover { box-shadow: grey 3px 3px 10px; }
 .contact-btn:active { transform: translate(2px, 2px); }
+.email-input-feedback { color: var(--white); text-transform: lowercase; padding: 0.5rem; margin-top: 0.3rem; line-height: 1; border-radius: 5px; font-size: 0.8rem; align-self: flex-end; display: none; transition: all 0.5s ease-in-out; }
 
 @media only screen and (max-width: 500px ) {
     .contact-form { padding: 3rem 2rem; }
