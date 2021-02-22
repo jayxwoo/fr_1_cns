@@ -135,9 +135,15 @@ const main = function () {
 
     // animation-1
     window.addEventListener('scroll', () => {
+        // section 0 - before animation
+        if (window.pageYOffset < animation_1.offsetTop - window.innerHeight) {
+            animation_1_img.style.display = 'none';
+        }
+
         // section 1 - fixed bg
         if (window.pageYOffset > animation_1.offsetTop - window.innerHeight && window.pageYOffset < animation_1.offsetTop) {
             // reinstate
+            animation_1_img.style.display = 'block';
             animation_1_container.style.position = 'relative';
             animation_1_container.style.transform = `scale(1)`;
             animation_1_text.style.transform = `scale(1)`;
