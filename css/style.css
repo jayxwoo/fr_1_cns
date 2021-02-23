@@ -184,7 +184,7 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 }
 
 /* footer */
-.footer { width: 100%; background-color: var(--black); color: var(--white); }
+.footer { width: 100%; background-color: var(--black); color: var(--white); margin-top: 5rem; }
 .footer-container { width: 100%; max-width: 1440px; margin: 0 auto; padding: 3rem; text-align: center; font-weight: lighter; font-size: 0.8rem; }
 .footer-copyright { margin-bottom: 0.5rem; }
 .footer-author { font-style: italic; font-size: 0.7rem; }
