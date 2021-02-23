@@ -5,6 +5,7 @@ import './default.js';
 const header = document.querySelector('header');
 const menuBtn = document.querySelector('.menu-btn');
 const menuIcn = document.querySelector('.menu-icn');
+const menuLinks = document.querySelectorAll('.menu-link');
 const nav = document.querySelector('.nav');
 const heroCompany = document.querySelector('.hero-company');
 const aboutWho = document.querySelector('.about-who');
@@ -28,8 +29,14 @@ const main = function () {
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 10) {
             header.classList.add('header--active');
+            menuLinks.forEach(link => {
+                link.style.color = 'var(--black)';
+            });
         } else {
             header.classList.remove('header--active');
+            menuLinks.forEach(link => {
+                link.style.color = 'var(--white)';
+            });
         };
     });
 
@@ -50,7 +57,7 @@ const main = function () {
     setInterval(() => {
         if (getComputedStyle(heroCompany).opacity === '1') {
             heroCompany.style.opacity = '0.5';
-            heroCompany.style.transform = 'translateY(10%)';
+            heroCompany.style.transform = 'translateY(50%)';
         } else {
             heroCompany.style.opacity = '1';
             heroCompany.style.transform = 'translateY(0)';
