@@ -42,7 +42,7 @@ const main = function () {
 
     // Nav link colour - on resize
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 800) {
+        if (window.innerWidth > 800 && window.pageYOffset < 10) {
             menuLinks.forEach(link => {
                 link.style.color = 'var(--white)';
             });
