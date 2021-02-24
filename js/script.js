@@ -8,6 +8,7 @@ const menuIcn = document.querySelector('.menu-icn');
 const menuLinks = document.querySelectorAll('.menu-link');
 const nav = document.querySelector('.nav');
 const heroCompany = document.querySelector('.hero-company');
+const heroContactBtn = document.querySelector('.hero-contact-btn');
 const aboutWho = document.querySelector('.about-who');
 const whoImg = document.querySelector('.who-img');
 const partnersContainer = document.querySelector('.partners-container');
@@ -16,6 +17,7 @@ const animation_1 = document.querySelector('.animation-1');
 const animation_1_container = document.querySelector('.animation-1-container');
 const animation_1_img = document.querySelector('.animation-1-img');
 const animation_1_text = document.querySelector('.animation-1-text');
+const contact = document.querySelector('.contact');
 const contactInputs = document.querySelectorAll('.contact-input');
 const emailInputFeedback = document.querySelector('.email-input-feedback');
 
@@ -25,6 +27,32 @@ const emailInputFeedback = document.querySelector('.email-input-feedback');
 // ========== script ==========
 // main
 const main = function () {
+    // Nav link colour - on load
+    window.addEventListener('load', () => {
+        if (window.innerWidth > 800) {
+            menuLinks.forEach(link => {
+                link.style.color = 'var(--white)';
+            });
+        } else {
+            menuLinks.forEach(link => {
+                link.style.color = 'var(--black)';
+            });
+        }
+    });
+
+    // Nav link colour - on resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 800) {
+            menuLinks.forEach(link => {
+                link.style.color = 'var(--white)';
+            });
+        } else {
+            menuLinks.forEach(link => {
+                link.style.color = 'var(--black)';
+            });
+        }
+    });
+
     // Detect scroll and apply background to the header(or navbar)
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 10) {
@@ -34,9 +62,15 @@ const main = function () {
             });
         } else {
             header.classList.remove('header--active');
-            menuLinks.forEach(link => {
-                link.style.color = 'var(--white)';
-            });
+            if (window.innerWidth > 800) {
+                menuLinks.forEach(link => {
+                    link.style.color = 'var(--white)';
+                });
+            } else {
+                menuLinks.forEach(link => {
+                    link.style.color = 'var(--black)';
+                });
+            };
         };
     });
 
@@ -63,6 +97,11 @@ const main = function () {
             heroCompany.style.transform = 'translateY(0)';
         };
     }, 1500);
+
+    // Hero contact button - scroll down to contact section when clicked
+    heroContactBtn.addEventListener('click', () => {
+        contact.scrollIntoView();
+    });
 
     // Parallax background img (about-who section)
     window.addEventListener('scroll', () => {
