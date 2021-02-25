@@ -19,6 +19,7 @@ const animation_1_img = document.querySelector('.animation-1-img');
 const animation_1_text = document.querySelector('.animation-1-text');
 const contact = document.querySelector('.contact');
 const contactInputs = document.querySelectorAll('.contact-input');
+const emailInput = document.querySelector('.email-input');
 const emailInputFeedback = document.querySelector('.email-input-feedback');
 
 // ========== global variables ==========
@@ -216,15 +217,25 @@ const main = function () {
         };
     };
 
-    contactInputs.forEach(input => {
-        input.addEventListener('keyup', (e) => {
-            if (e.target.value.length > 5) {
-                validate(e.target.value, pattern[e.target.name]);
-            };
-            if (e.target.value.length === 0) {
-                emailInputFeedback.style.display = 'none';
-            };
-        });
+    emailInput.addEventListener('keyup', (e) => {
+        if (e.target.value.length > 5) {
+            validate(e.target.value, pattern[e.target.name]);
+        };
+        if (e.target.value.length === 0) {
+            emailInputFeedback.style.display = 'none';
+        };
     });
+
+
+    // contactInputs.forEach(input => {
+    //     input.addEventListener('keyup', (e) => {
+    //         if (e.target.value.length > 5) {
+    //             validate(e.target.value, pattern[e.target.name]);
+    //         };
+    //         if (e.target.value.length === 0) {
+    //             emailInputFeedback.style.display = 'none';
+    //         };
+    //     });
+    // });
 };
 main();
