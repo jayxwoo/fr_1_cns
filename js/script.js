@@ -98,7 +98,7 @@ const main = function () {
             heroCompany.style.opacity = '1';
             heroCompany.style.transform = 'translateY(0)';
         };
-    }, 1500);
+    }, 1000);
 
     // Hero contact button - scroll down to contact section when clicked
     heroContactBtn.addEventListener('click', () => {
