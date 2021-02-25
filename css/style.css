@@ -89,7 +89,7 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
 
 /* about */
 /* about - service */
-.about-service { width: 100%; max-width: 1440px; margin: 0 auto; margin-bottom: 3rem; background-color: var(--bgLightGrey); display: flex; }
+.about-service { width: 100%; max-width: 1440px; margin: 0 auto; background-color: var(--bgLightGrey); display: flex; }
 .service-container { padding: 5rem 3rem; width: 50%; }
 .service-group { list-style: disc; margin-left: 2rem; font-size: 1.2rem; }
 .service-item { padding: 0.5rem 0; }
