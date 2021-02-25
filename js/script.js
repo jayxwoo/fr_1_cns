@@ -60,8 +60,10 @@ const main = function () {
             menuLinks.forEach(link => {
                 link.style.color = 'var(--black)';
             });
+            menuBtn.style.color = 'var(--black)';
         } else {
             header.classList.remove('header--active');
+            menuBtn.style.color = 'var(--white)';
             if (window.innerWidth > 800) {
                 menuLinks.forEach(link => {
                     link.style.color = 'var(--white)';
