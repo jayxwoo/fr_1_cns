@@ -76,8 +76,8 @@ html { font-family: helvetica, sans-serif; color: var(--black); }
     .logo-img { width: 40px; }
     .menu-btn { right: 2rem; }
     .hero-text-container { padding: 0 3rem; }
-    .hero-text { font-size: 1.5rem; }
-    .hero-company { font-size: 0.9rem; }
+    .hero-text { font-size: 2rem; }
+    .hero-company { font-size: 1rem; }
     .hero-contact-btn { font-size: 0.9rem; padding: 0.8rem; }
 }
 
