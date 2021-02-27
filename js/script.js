@@ -142,6 +142,7 @@ const main = function () {
         // section 0 - before animation
         if (window.pageYOffset < animation_1.offsetTop - window.innerHeight) {
             animation_1_img.style.display = 'none';
+            animation_1_img.classList.remove('will-change');
         };
 
         // section 1 - fixed bg
@@ -160,6 +161,9 @@ const main = function () {
             const endPosition = animation_1.offsetTop;
             const scrollRatio = (scroll - startPosition) / (endPosition - startPosition);
 
+            // apply will-change
+            animation_1_img.classList.add('will-change');
+
             // animation
             animation_1_img.style.top = `${-100 + (100 * scrollRatio)}vh`;
         };
@@ -168,6 +172,7 @@ const main = function () {
         if (window.pageYOffset > animation_1.offsetTop && window.pageYOffset < animation_1.offsetTop + window.innerHeight) {
             // reinstate
             animation_1_img.style.top = 0;
+            animation_1_img.classList.remove('will-change');
 
             // calc scrollRatio
             const scroll = window.pageYOffset;
